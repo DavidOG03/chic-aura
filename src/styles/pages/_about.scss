@@ -1,0 +1,540 @@
+// @use '../variables/colors' as *;
+// @use '../variables/fonts' as *;
+@import "../../styles/variables/functions";
+
+.about-page {
+  &-header {
+    padding: 3rem 1rem;
+    position: relative;
+    .title {
+      &-span {
+        font-family: $font-family4;
+        color: $text-black;
+        font-size: 1.5rem;
+        span {
+          color: $Bright-Red;
+        }
+      }
+      h1 {
+        font-family: $font-family;
+        font-size: 2rem;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -1.5rem;
+          left: 0;
+          width: 30%;
+          height: 3px;
+          background: $Bright-Red;
+        }
+      }
+    }
+    .page-check {
+      @include dcenter(center, row, 0.25rem);
+      text-transform: uppercase;
+      font-size: 0.55rem;
+      font-family: $font-family3;
+      border: 1px solid $Border-gray;
+      padding: 0.25rem 0.6rem;
+      border-radius: 2rem;
+      max-width: 9rem;
+      background: $Off-white;
+      position: absolute;
+      bottom: -0.75rem;
+      right: 2rem;
+      a {
+        text-decoration: none;
+        color: $text-black;
+      }
+      .page {
+        color: $text-gray;
+      }
+      .material-symbols-outlined {
+        color: $text-gray;
+        font-size: 0.75rem;
+      }
+    }
+  }
+}
+
+.sideblock {
+  padding: 3rem 1rem;
+  background: $white;
+  &-image {
+    width: inherit;
+    height: auto;
+    margin-bottom: 3rem;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &-text {
+    p {
+      font-size: 1rem;
+      color: $text-gray;
+      font-family: $font-family3;
+      font-weight: weight(light);
+      padding-bottom: 2.5rem;
+      line-height: 1.5rem;
+    }
+    h2 {
+      font-size: 1.55rem;
+      font-family: $font-family;
+      font-weight: weight(bold);
+      padding-bottom: 1rem;
+    }
+    .join {
+      &-word {
+        font-size: 1rem;
+        color: $text-gray;
+        font-family: $font-family3;
+        font-weight: weight(light);
+        line-height: 1.5rem;
+      }
+
+      .cta-button {
+        display: block;
+        background: none;
+        border: 2px solid $text-black;
+        text-transform: uppercase;
+        border-radius: 1.5rem;
+        padding: 0.75rem 2rem;
+        font-family: $font-family3;
+        font-weight: weight(bold);
+        letter-spacing: 0.1rem;
+        margin-top: 2rem;
+      }
+    }
+  }
+}
+
+.ceo-testimony {
+  background: url(/public/images/ceo-woman.jpg);
+  background-position: 40% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5rem 2rem;
+  .testimony {
+    background: $white;
+    padding: 2rem 1.2rem;
+    border-radius: 0.5rem;
+    q {
+      display: block;
+      margin: auto;
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      color: $text-gray;
+      padding-bottom: 1.5rem;
+    }
+    .role {
+      font-family: $font-family3;
+      @include dcenter(center, row, 0.25rem);
+      strong {
+        font-weight: weight(bold);
+        font-size: 0.9rem;
+        color: $text-black;
+      }
+      span {
+        font-size: 0.9rem;
+        color: $text-gray;
+      }
+    }
+  }
+}
+
+.values-section {
+  padding: 3rem 1rem;
+  background: $white;
+  h2 {
+    font-family: $font-family3;
+    color: $text-black;
+    font-size: 28px;
+    margin-bottom: 3.5rem;
+    line-height: 36px;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -1.5rem;
+        left: 0;
+        width: 30%;
+        height: 3px;
+        background: $Bright-Red;
+      }
+  }
+  .value {
+    padding-bottom: 1.5rem;
+    h3 {
+      font-size: 1.5rem;
+      font-family: $font-family3;
+      padding-bottom: 1rem;
+    }
+    p {
+      color: $text-gray;
+      font-size: 1rem;
+      font-weight: weight(light);
+      line-height: 1.5rem;
+      font-family: $font-family3;
+    }
+  }
+  a{
+    color: $text-black;
+    font-size: 11px;
+    line-height: 1rem;
+    font-family: $font-family3;
+    text-transform: uppercase;
+    position: relative;
+    letter-spacing: 0.1rem;
+    font-weight: weight(bold);
+    padding-bottom: 0.75rem;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0rem;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: $text-black;
+        transition: background 0.2s ease-in-out;
+      }
+
+      &:hover{
+        &::before {
+            background: $Bright-Red;
+          }
+      }
+  }
+}
+
+.instagram-posts{
+    background: $white;
+    padding:1.5rem 1rem 2.5rem 1rem;
+    .first-gallery, .second-gallery{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+        div{
+            width: auto;
+            height: auto;
+            display: block;
+        }
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .middle{
+        background: $Hero-gray;
+        @include dcenter(flex-start,column,1.5rem);
+        padding: 4rem;
+        margin-bottom: 0.5rem;
+        img{
+            width: 35%;
+            display: block;
+            margin-bottom: 1.5rem;
+        }
+        h6{
+            font-family: $font-family4;
+            text-transform: capitalize;
+            font-size: 23px;
+                line-height: 2rem;
+                font-weight: weight(light);
+            span{
+                color: $Bright-Red;
+                
+            }
+        }
+        p{
+            font-family: $font-family;
+            font-size: 28px;
+            font-weight: weight(bold);
+            color: #212121;
+        }
+    }
+}
+
+
+
+
+
+
+
+@media screen and (min-width:768px) {
+  .about-page {
+    &-header {
+      padding: 3rem 1rem;
+      position: relative;
+      background: $Hero-gray;
+      .title {
+        &-span {
+          font-family: $font-family4;
+          color: $text-black;
+          font-size: 1.5rem;
+          span {
+            color: $Bright-Red;
+          }
+        }
+        h1 {
+          font-family: $font-family;
+          font-size: 2rem;
+          position: relative;
+          max-width: 20rem;
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: -1.5rem;
+            left: 0;
+            width: 30%;
+            height: 3px;
+            background: $Bright-Red;
+          }
+        }
+      }
+      .page-check {
+        @include dcenter(center, row, 0.25rem);
+        text-transform: uppercase;
+        font-size: 0.55rem;
+        font-family: $font-family3;
+        border: 1px solid $Border-gray;
+        padding: 0.25rem 0.6rem;
+        border-radius: 2rem;
+        max-width: 9rem;
+        background: $Off-white;
+        position: absolute;
+        bottom: -0.75rem;
+        right: 2rem;
+        a {
+          text-decoration: none;
+          color: $text-black;
+        }
+        .page {
+          color: $text-gray;
+        }
+        .material-symbols-outlined {
+          color: $text-gray;
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+  
+  .sideblock {
+    padding: 3rem 1rem;
+    background: $white;
+    @include dcenter(space-between,row-reverse,5rem);
+    &-image {
+      width: 100%;
+      height: auto;
+      margin-bottom: 3rem;
+      flex-basis: 50%;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    &-text {
+      flex-basis: 50%;
+
+      p {
+        font-size: 1rem;
+        color: $text-gray;
+        font-family: $font-family3;
+        font-weight: weight(light);
+        padding-bottom: 2.5rem;
+        line-height: 1.5rem;
+      }
+      h2 {
+        font-size: 1.55rem;
+        font-family: $font-family;
+        font-weight: weight(bold);
+        padding-bottom: 1rem;
+      }
+      .join {
+        &-word {
+          font-size: 1rem;
+          color: $text-gray;
+          font-family: $font-family3;
+          font-weight: weight(light);
+          line-height: 1.5rem;
+        }
+  
+        .cta-button {
+          display: block;
+          background: none;
+          border: 2px solid $text-black;
+          text-transform: uppercase;
+          border-radius: 1.5rem;
+          padding: 0.75rem 2rem;
+          font-family: $font-family3;
+          font-weight: weight(bold);
+          letter-spacing: 0.1rem;
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+  
+  .ceo-testimony {
+    background: url(/public/images/ceo-woman.jpg);
+    background-position: 40% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5rem 2rem;
+    .testimony {
+      background: $white;
+      padding: 3rem 2rem;
+      border-radius: 0;
+      max-width: 30rem;
+      margin: auto;
+      q {
+        display: block;
+        margin: auto;
+        text-align: center;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: $text-gray;
+        padding-bottom: 1.5rem;
+      }
+      .role {
+        font-family: $font-family3;
+        @include dcenter(center, row, 0.25rem);
+        strong {
+          font-weight: weight(bold);
+          font-size: 0.9rem;
+          color: $text-black;
+        }
+        span {
+          font-size: 0.9rem;
+          color: $text-gray;
+        }
+      }
+    }
+  }
+  
+  .values-section {
+    padding: 3rem 1rem;
+    background: $white;
+    h2 {
+      font-family: $font-family3;
+      color: $text-black;
+      font-size: 28px;
+      margin-bottom: 3.5rem;
+      line-height: 36px;
+      position: relative;
+      max-width: 30rem;
+      &::before {
+          content: "";
+          position: absolute;
+          bottom: -1.5rem;
+          left: 0;
+          width: 30%;
+          height: 3px;
+          background: $Bright-Red;
+        }
+    }
+    .values{
+      @include dcenter(space-evenly, row, 3rem);
+      .value {
+        padding-bottom: 1.5rem;
+        h3 {
+          font-size: 1.5rem;
+          font-family: $font-family3;
+          padding-bottom: 1rem;
+        }
+        p {
+          color: $text-gray;
+          font-size: 1rem;
+          font-weight: weight(light);
+          line-height: 1.5rem;
+          font-family: $font-family3;
+        }
+      }
+      a{
+        color: $text-black;
+        font-size: 11px;
+        line-height: 1rem;
+        font-family: $font-family3;
+        text-transform: uppercase;
+        position: relative;
+        letter-spacing: 0.1rem;
+        font-weight: weight(bold);
+        padding-bottom: 0.75rem;
+    
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0rem;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: $text-black;
+            transition: background 0.2s ease-in-out;
+          }
+    
+          &:hover{
+            &::before {
+                background: $Bright-Red;
+              }
+          }
+      }
+    }
+    
+  }
+  
+  .instagram-posts{
+      background: $white;
+      padding:1.5rem 1rem 2.5rem 1rem;
+      .first-gallery, .second-gallery{
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 0.5rem;
+          margin-bottom: 0.5rem;
+          div{
+              width: auto;
+              height: auto;
+              display: block;
+          }
+          img{
+              width: 100%;
+              object-fit: cover;
+          }
+      }
+  
+      .middle{
+          background: $Hero-gray;
+          display: flex;
+          // @include dcenter(flex-start,column,1.5rem);
+          padding: 4rem;
+          margin-bottom: 0;
+          img{
+              width: 35%;
+              display: block;
+              margin-bottom: 1rem;
+          }
+          h6{
+              font-family: $font-family4;
+              text-transform: capitalize;
+              font-size: 23px;
+                  line-height: 2rem;
+                  font-weight: weight(light);
+              span{
+                  color: $Bright-Red;
+                  
+              }
+          }
+          p{
+              font-family: $font-family;
+              font-size: 28px;
+              font-weight: weight(bold);
+              color: #212121;
+          }
+      }
+  }
+}

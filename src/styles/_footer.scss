@@ -1,0 +1,206 @@
+// @use "./variables/colors" as *;
+// @use "./variables/fonts" as *;
+// @import "./variables/functions";
+
+.footer {
+  padding: 2rem 0.8rem;
+  background: $Hero-gray;
+  .links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .link {
+    padding-bottom: 1.5rem;
+    h3 {
+      font-family: $font-family;
+      font-size: 14px;
+      font-weight: weight(bold);
+      color: #212121;
+      text-transform: uppercase;
+      padding-bottom: 1.5rem;
+    }
+    ul {
+      list-style: none;
+      li {
+        padding-bottom: 1rem;
+        a {
+          color: rgb(136, 136, 136);
+          font-family: $font-family;
+          font-size: 13px;
+          font-weight: weight(light);
+          transform: translate(0);
+
+          &:hover {
+            color: $Bright-Red;
+            translate: 1rem 0;
+          }
+        }
+      }
+    }
+  }
+
+  .newsletter {
+    h4 {
+      font-family: $font-family;
+      padding-bottom: 1.5rem;
+      text-transform: uppercase;
+    }
+    form {
+      position: relative;
+      width: 80%;
+      margin-bottom: 1rem;
+      img {
+        position: absolute;
+        top: 50%;
+        left: 1rem;
+        translate: 0 -50%;
+        width: 1rem;
+      }
+      input {
+        width: 100%;
+        height: 100%;
+        padding: 0.9rem 0.9rem 0.9rem 4rem;
+        border: 1px solid $Border-gray;
+        border-radius: 5rem;
+        &::placeholder {
+          // padding-left: 2rem;
+          font-family: $font-family3;
+        }
+      }
+      button {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        translate: 0 -50%;
+        width: 3rem;
+        height: 3rem;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        border-radius: 50%;
+        border: none;
+        background: $Bright-Red;
+        color: $white;
+      }
+    }
+    small {
+      font-family: $font-family3;
+      font-size: 11px;
+      font-weight: weight(light);
+      color: $text-gray;
+      a {
+        color: #212121;
+        &:hover {
+          color: $Bright-Red;
+        }
+      }
+    }
+  }
+}
+
+
+
+@media screen and (min-width:768px) {
+  
+  .footer {
+    padding: 2rem 0.8rem;
+    background: $Hero-gray;
+    @include dstart(unset,row,3rem);
+    .links {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      flex-basis: 60%;
+    }
+  
+    .link {
+      padding-bottom: 1.5rem;
+      h3 {
+        font-family: $font-family;
+        font-size: 14px;
+        font-weight: weight(bold);
+        color: #212121;
+        text-transform: uppercase;
+        padding-bottom: 1.5rem;
+      }
+      ul {
+        list-style: none;
+        li {
+          padding-bottom: 1rem;
+          a {
+            color: rgb(136, 136, 136);
+            font-family: $font-family;
+            font-size: 13px;
+            font-weight: weight(light);
+            transform: translate(0);
+  
+            &:hover {
+              color: $Bright-Red;
+              translate: 1rem 0;
+            }
+          }
+        }
+      }
+    }
+  
+    .newsletter {
+      flex-basis: 40%;
+
+      h4 {
+        font-family: $font-family;
+        padding-bottom: 1.5rem;
+        text-transform: uppercase;
+      }
+      form {
+        position: relative;
+        width: 80%;
+        margin-bottom: 1rem;
+        img {
+          position: absolute;
+          top: 50%;
+          left: 1rem;
+          translate: 0 -50%;
+          width: 1rem;
+        }
+        input {
+          width: 100%;
+          height: 100%;
+          padding: 0.9rem 0.9rem 0.9rem 4rem;
+          border: 1px solid $Border-gray;
+          border-radius: 5rem;
+          &::placeholder {
+            // padding-left: 2rem;
+            font-family: $font-family3;
+          }
+        }
+        button {
+          position: absolute;
+          right: 0;
+          top: 50%;
+          translate: 0 -50%;
+          width: 3rem;
+          height: 3rem;
+          display: grid;
+          place-items: center;
+          text-align: center;
+          border-radius: 50%;
+          border: none;
+          background: $Bright-Red;
+          color: $white;
+        }
+      }
+      small {
+        font-family: $font-family3;
+        font-size: 11px;
+        font-weight: weight(light);
+        color: $text-gray;
+        a {
+          color: #212121;
+          &:hover {
+            color: $Bright-Red;
+          }
+        }
+      }
+    }
+  }
+}

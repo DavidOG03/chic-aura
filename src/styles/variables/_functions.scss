@@ -1,0 +1,27 @@
+@function weight($weight-name) {
+    @return map-get($font-weights , $weight-name );
+}
+
+@mixin dcenter($justify,$direction,$gap) {
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+    flex-direction: $direction;
+    gap: $gap;
+}
+
+@mixin dstart($justify,$direction,$gap) {
+    display: flex;
+    justify-content: $justify;
+    align-items: flex-start;
+    flex-direction: $direction;
+    gap: $gap;
+}
+
+@mixin dstretch($justify,$direction,$gap) {
+    display: flex;
+    justify-content: $justify;
+    align-items: stretch;
+    flex-direction: $direction;
+    gap: $gap;
+}

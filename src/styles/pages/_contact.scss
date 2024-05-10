@@ -1,0 +1,245 @@
+@import "../variables/functions";
+
+.contact-page {
+  &-header {
+    padding: 3rem 1rem;
+    position: relative;
+    .title {
+      &-span {
+        font-family: $font-family4;
+        color: $text-black;
+        font-size: 1.5rem;
+        span {
+          color: $Bright-Red;
+        }
+      }
+      h1 {
+        font-family: $font-family;
+        font-size: 2rem;
+        position: relative;
+        text-transform: capitalize;
+        padding-bottom: 1.5rem;
+        text-align: left;
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0rem;
+          left: 0;
+          width: 30%;
+          height: 3px;
+          background: $Bright-Red;
+        }
+      }
+    }
+    .page-check {
+      @include dcenter(center, row, 0.25rem);
+      text-transform: uppercase;
+      font-size: 0.55rem;
+      font-family: $font-family3;
+      border: 1px solid $Border-gray;
+      padding: 0.25rem 0.6rem;
+      border-radius: 2rem;
+      max-width: 9rem;
+      background: $Off-white;
+      position: absolute;
+      bottom: -0.75rem;
+      right: 2rem;
+      a {
+        text-decoration: none;
+        color: $text-black;
+      }
+      .page {
+        color: $text-gray;
+      }
+      .material-symbols-outlined {
+        color: $text-gray;
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  .contact-form {
+    margin-block: 3rem;
+    background: $Hero-gray;
+    padding: 3rem 1rem;
+    h2 {
+      color: $text-black;
+      font-family: $font-family;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      padding-bottom: 2.5rem;
+    }
+    form {
+      input {
+        width: 100%;
+        padding: 1rem 1.5rem;
+        border: 1px solid $Border-gray;
+        border-radius: 1.5rem;
+        margin-bottom: 1.5rem;
+        transition: border 0.2s ease-in-out;
+        outline: none;
+        font-family: $font-family3;
+        font-size: 1rem;
+        color: $text-black;
+        &::placeholder {
+          color: $text-gray;
+          font-family: $font-family3;
+          font-weight: weight(light);
+          font-size: 1rem;
+        }
+        &:focus {
+          border: 1px solid $Bright-Red;
+        }
+      }
+      textarea {
+        width: 100%;
+        padding: 1rem 1.5rem;
+        border: 1px solid $Border-gray;
+        border-radius: 1.5rem;
+        margin-bottom: 1.5rem;
+        transition: border 0.2s ease-in-out;
+        outline: none;
+        font-family: $font-family3;
+        color: $text-black;
+        font-size: 1rem;
+
+        &::placeholder {
+          color: $text-gray;
+          font-family: $font-family3;
+          font-weight: weight(light);
+          font-size: 1rem;
+        }
+        &:focus {
+          border: 1px solid $Bright-Red;
+        }
+      }
+
+      button {
+        border: none;
+        background: $Bright-Red;
+        color: $white;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        font-family: $font-family3;
+        padding: 1rem 1.5rem;
+        border-radius: 1.5rem;
+      }
+    }
+  }
+
+  .address {
+    padding: 3rem 1rem;
+    background: $white;
+    h3 {
+      font-family: $font-family;
+      font-size: 20px;
+      font-weight: weight(bold);
+      color: $text-black;
+      padding-bottom: 1.5rem;
+    }
+    &-info {
+      font-size: 12px;
+      font-family: $font-family3;
+      line-height: 20px;
+      color: $text-gray;
+      font-weight: weight(light);
+      margin-bottom: 1.5rem;
+      span {
+        display: block;
+      }
+    }
+    a {
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      padding-bottom: 1rem;
+      color: $text-black;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0rem;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: $text-black;
+        transition: background 0.2s ease-in-out;
+      }
+      &:hover {
+        &::before {
+          background: $Bright-Red;
+        }
+      }
+    }
+    .details {
+      margin-block: 2.5rem;
+      font-size: 12px;
+      font-family: $font-family3;
+      color: $text-gray;
+      font-weight: weight(light);
+      strong {
+        color: $text-black;
+        font-weight: weight(bold);
+      }
+    }
+
+    .socials {
+      h4 {
+        font-family: $font-family;
+        font-size: 20px;
+        font-weight: weight(bold);
+        color: $text-black;
+        padding-bottom: 1.5rem;
+      }
+      .icons {
+        @include dcenter(flex-start, row, 0.25rem);
+        .socials-icon {
+          display: grid;
+          place-items: center;
+          padding: 1rem;
+          border: 1px solid $Border-gray;
+          border-radius: 50%;
+          transition: border 0.2s ease-in-out;
+
+          &:hover {
+            border: 1px solid $text-gray;
+            cursor: pointer;
+          }
+          img {
+            width: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+  .map {
+    .title {
+      font-family: $font-family4;
+      color: $text-black;
+      font-size: 1.5rem;
+      display: block;
+      text-align: center;
+      span {
+        color: $Bright-Red;
+      }
+    }
+    h3 {
+      font-family: $font-family;
+      font-size: 2rem;
+      position: relative;
+      text-transform: capitalize;
+      padding-bottom: 1.5rem;
+      text-align: center;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0rem;
+        left: 50%;
+        translate: -50% 0;
+        width: 30%;
+        height: 3px;
+        background: $Bright-Red;
+      }
+    }
+  }
+}
